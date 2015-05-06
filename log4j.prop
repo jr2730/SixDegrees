@@ -1,0 +1,17 @@
+# log4j.rootLogger=TRACE, theFile
+# 
+# log4j.appender.theFile=org.apache.log4j.FileAppender
+# log4j.appender.theFile.File=/home/andromeda/log/Andromeda.log
+# log4j.appender.theFile.layout=org.apache.log4j.PatternLayout
+# log4j.appender.theFile.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss.SSS} [%x] %-5p %-20c{3} | %m%n
+# 
+# Root logger option
+log4j.rootLogger=INFO, stdout
+
+log4j.logger.org.apache.http.client.protocol.ResponseProcessCookies= FATAL
+ 
+# Direct log messages to stdout
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target=System.out
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern=%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n
